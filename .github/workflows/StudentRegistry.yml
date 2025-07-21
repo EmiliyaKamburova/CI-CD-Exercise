@@ -38,4 +38,4 @@ jobs:
       run: sleep 5
       
     - name: Run tests
-      run: npm test
+      run: node ./node__modules/mocha/bin/mocha tests/*.js
