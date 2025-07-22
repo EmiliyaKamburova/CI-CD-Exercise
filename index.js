@@ -6,6 +6,7 @@ import students from './models/students-model.js';
 const app = express();
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 setupStudentsController(app, students);
 

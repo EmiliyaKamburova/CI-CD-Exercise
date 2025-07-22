@@ -51,4 +51,9 @@ export function setup(app, students) {
     students.push(student);
     res.redirect('/students');
   });
+
+  app.post('/github-webhook', function(req, res) {
+    console.log('Received GitHub webhook:', req.body);
+    res.status(200).send('Webhook received');
+  });
 }
