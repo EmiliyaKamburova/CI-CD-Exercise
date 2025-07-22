@@ -2,19 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Install') {
             steps {
-                echo 'Building..'
+                sh 'npm ci'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'npm test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                // Add your deployment commands here
             }
         }
     }
